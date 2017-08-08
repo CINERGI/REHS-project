@@ -1,4 +1,4 @@
-package com.company;
+package edu.sdsc.cinergi;
 
 import edu.stanford.nlp.ling.CoreAnnotations;
 import edu.stanford.nlp.ling.CoreLabel;
@@ -74,7 +74,7 @@ public class Main {
         return !date.substring(0, 4).contains("X");
     }
     private static ArrayList<String> readexcel(int col) throws IOException {
-        String strFile=System.getProperty("user.dir")+"\\ids.xlsx"; //IDS THAT YOU WANT TO ANALYZE IN .xlsx format
+        String strFile=System.getProperty("user.dir")+"\\TemporalEnhancer\\ids.xlsx"; //IDS THAT YOU WANT TO ANALYZE IN .xlsx format
         InputStream inp = new FileInputStream(strFile);
         XSSFWorkbook wb = new XSSFWorkbook(inp);
         ArrayList<String> excelids=new ArrayList<String>();
@@ -95,7 +95,7 @@ public class Main {
 
     }
     private static void writeexcel(String towrite, int col, int rowp) throws IOException, InvalidFormatException {
-        String strFile=System.getProperty("user.dir")+"\\ids.xlsx";
+        String strFile=System.getProperty("user.dir")+"\\TemporalEnhancer\\ids.xlsx";
         InputStream inp=new FileInputStream(strFile);
         XSSFWorkbook wb=new XSSFWorkbook(inp);
 
